@@ -12,9 +12,11 @@ spec:
   template:
     metadata:
       annotations:
+        apps.tanzu.vmware.com/live-update: "true"
         boot.spring.io/actuator: http://:8081/actuator
         boot.spring.io/version: 2.5.12
         conventions.apps.tanzu.vmware.com/applied-conventions: |-
+          developer-conventions/add-source-image-label
           spring-boot-convention/spring-boot
           spring-boot-convention/spring-boot-graceful-shutdown
           spring-boot-convention/spring-boot-web
@@ -24,6 +26,7 @@ spec:
           appliveview-sample/app-live-view-connector
           appliveview-sample/app-live-view-appflavours
           appliveview-sample/app-live-view-systemproperties
+        developer.apps.tanzu.vmware.com/image-source-digest: 8a683061bbeef7a5aeb8153dec96fdd84c4fc3ce
         developer.conventions/target-containers: workload
         services.conventions.apps.tanzu.vmware.com/mysql: mysql-connector-java/8.0.28
         services.conventions.apps.tanzu.vmware.com/rabbitmq: amqp-client/5.12.0

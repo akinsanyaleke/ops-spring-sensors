@@ -16,7 +16,7 @@ spec:
         autoscaling.knative.dev/maxScale: "1"
         autoscaling.knative.dev/minScale: "1"
         boot.spring.io/actuator: http://:8081/actuator
-        boot.spring.io/version: 2.5.12
+        boot.spring.io/version: 2.5.13
         conventions.apps.tanzu.vmware.com/applied-conventions: |-
           developer-conventions/live-update-convention
           developer-conventions/add-source-image-label
@@ -29,7 +29,7 @@ spec:
           appliveview-sample/app-live-view-connector
           appliveview-sample/app-live-view-appflavours
           appliveview-sample/app-live-view-systemproperties
-        developer.apps.tanzu.vmware.com/image-source-digest: 8a683061bbeef7a5aeb8153dec96fdd84c4fc3ce
+        developer.apps.tanzu.vmware.com/image-source-digest: f2054ad0e45d75b29090ea94ff5c3c1939529b67
         developer.conventions/target-containers: workload
         services.conventions.apps.tanzu.vmware.com/mysql: mysql-connector-java/8.0.28
         services.conventions.apps.tanzu.vmware.com/rabbitmq: amqp-client/5.12.0
@@ -51,7 +51,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: leke213.azurecr.io/supplychain-output-images/spring-sensors-default@sha256:97df1ba44dd7d8a06d1ee892a438f0e5f177e96c62bcfa9a7edacab34cd8e065
+        image: leke213.azurecr.io/supplychain-output-images/spring-sensors-default@sha256:1df4bac36d21a677634ff545d57267797f59c51340761787716d4d851ef11e4f
         name: workload
         ports:
         - containerPort: 8080

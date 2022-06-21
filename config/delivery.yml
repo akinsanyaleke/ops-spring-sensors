@@ -45,7 +45,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: leke213.azurecr.io/supplychain-output-images/spring-sensors-default@sha256:1b71f64ad7169bc94ceeede294e95207060f7e0b37bfcc18cb0089927169ed11
+        image: leke213.azurecr.io/supplychain-output-images/spring-sensors-default@sha256:54ff8825e298c0f967950c6b921d8226dd1457e3217f4a081ed33b1e1056c85e
         name: workload
         ports:
         - containerPort: 8080
